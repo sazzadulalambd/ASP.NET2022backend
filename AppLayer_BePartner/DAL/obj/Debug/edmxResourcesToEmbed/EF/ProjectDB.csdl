@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bePartnerCentralDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Ad_Email" />
+    </Key>
+    <Property Name="Ad_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Address" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Security_key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Emp_Email" />
+    </Key>
+    <Property Name="Emp_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Address" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Security_key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Entrepreneur">
+    <Key>
+      <PropertyRef Name="En_Email" />
+    </Key>
+    <Property Name="En_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Bob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Address" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideas" Relationship="Self.FK_Ideas_Entrepreneurs" FromRole="Entrepreneurs" ToRole="Ideas" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offers_Entrepreneurs" FromRole="Entrepreneurs" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Idea">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="En_Post_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="In_Asp_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Company_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Moto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Post_Time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Asking_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Asking_Share" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Offer_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Offer_Share" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Total_Profit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Month_profit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Year_Profit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valuation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Feature1_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Feature1_Des" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Feature2_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Feature2_Des" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Feature3_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Feature3_Des" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Feature4_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Feature4_Des" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Entrepreneur" Relationship="Self.FK_Ideas_Entrepreneurs" FromRole="Ideas" ToRole="Entrepreneurs" />
+    <NavigationProperty Name="Investor" Relationship="Self.FK_Ideas_in_Investors" FromRole="Ideas" ToRole="Investors" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offers_Ideas" FromRole="Ideas" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Investor">
+    <Key>
+      <PropertyRef Name="In_Email" />
+    </Key>
+    <Property Name="In_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgEstablished" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="OrgLocation" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgLicense" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrgSite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailValidation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideas" Relationship="Self.FK_Ideas_in_Investors" FromRole="Investors" ToRole="Ideas" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offers_Investors" FromRole="Investors" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MsgId" />
+    </Key>
+    <Property Name="MsgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Receiver" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Message1" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Time" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="In_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="En_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ideas_Id" Type="Int32" Nullable="false" />
+    <Property Name="Offered_Share" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Offered_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Entrepreneur" Relationship="Self.FK_Offers_Entrepreneurs" FromRole="Offers" ToRole="Entrepreneurs" />
+    <NavigationProperty Name="Idea" Relationship="Self.FK_Offers_Ideas" FromRole="Offers" ToRole="Ideas" />
+    <NavigationProperty Name="Investor" Relationship="Self.FK_Offers_Investors" FromRole="Offers" ToRole="Investors" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="ReportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Receiver" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Report_Time" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Task_Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Issue_time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Due_time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Ideas_Entrepreneurs">
+    <End Role="Entrepreneurs" Type="Self.Entrepreneur" Multiplicity="1" />
+    <End Role="Ideas" Type="Self.Idea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entrepreneurs">
+        <PropertyRef Name="En_Email" />
+      </Principal>
+      <Dependent Role="Ideas">
+        <PropertyRef Name="En_Post_Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Entrepreneurs">
+    <End Role="Entrepreneurs" Type="Self.Entrepreneur" Multiplicity="1" />
+    <End Role="Offers" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entrepreneurs">
+        <PropertyRef Name="En_Email" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="En_Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ideas_in_Investors">
+    <End Role="Investors" Type="Self.Investor" Multiplicity="0..1" />
+    <End Role="Ideas" Type="Self.Idea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Investors">
+        <PropertyRef Name="In_Email" />
+      </Principal>
+      <Dependent Role="Ideas">
+        <PropertyRef Name="In_Asp_Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Ideas">
+    <End Role="Ideas" Type="Self.Idea" Multiplicity="1" />
+    <End Role="Offers" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideas">
+        <PropertyRef Name="PostId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="Ideas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Investors">
+    <End Role="Investors" Type="Self.Investor" Multiplicity="1" />
+    <End Role="Offers" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Investors">
+        <PropertyRef Name="In_Email" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="In_Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bePartnerCentralDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Entrepreneurs" EntityType="Self.Entrepreneur" />
+    <EntitySet Name="Ideas" EntityType="Self.Idea" />
+    <EntitySet Name="Investors" EntityType="Self.Investor" />
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="Offers" EntityType="Self.Offer" />
+    <EntitySet Name="Reports" EntityType="Self.Report" />
+    <EntitySet Name="Tasks" EntityType="Self.Task" />
+    <AssociationSet Name="FK_Ideas_Entrepreneurs" Association="Self.FK_Ideas_Entrepreneurs">
+      <End Role="Entrepreneurs" EntitySet="Entrepreneurs" />
+      <End Role="Ideas" EntitySet="Ideas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Entrepreneurs" Association="Self.FK_Offers_Entrepreneurs">
+      <End Role="Entrepreneurs" EntitySet="Entrepreneurs" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ideas_in_Investors" Association="Self.FK_Ideas_in_Investors">
+      <End Role="Investors" EntitySet="Investors" />
+      <End Role="Ideas" EntitySet="Ideas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Ideas" Association="Self.FK_Offers_Ideas">
+      <End Role="Ideas" EntitySet="Ideas" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Investors" Association="Self.FK_Offers_Investors">
+      <End Role="Investors" EntitySet="Investors" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

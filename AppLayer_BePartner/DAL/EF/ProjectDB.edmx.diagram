@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8baf2c287a064ba7b36b3545fa305495" Name="Diagram1">
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Employee" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Entrepreneur" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Idea" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Investor" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Message" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Offer" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Report" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Task" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="bePartnerCentralDatabaseModel.FK_Ideas_Entrepreneurs" ManuallyRouted="false" />
+        <AssociationConnector Association="bePartnerCentralDatabaseModel.FK_Offers_Entrepreneurs" ManuallyRouted="false" />
+        <AssociationConnector Association="bePartnerCentralDatabaseModel.FK_Ideas_in_Investors" ManuallyRouted="false" />
+        <AssociationConnector Association="bePartnerCentralDatabaseModel.FK_Offers_Ideas" ManuallyRouted="false" />
+        <AssociationConnector Association="bePartnerCentralDatabaseModel.FK_Offers_Investors" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.Token" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="bePartnerCentralDatabaseModel.User" Width="1.5" PointX="9.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
