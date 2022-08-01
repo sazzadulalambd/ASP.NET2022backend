@@ -99,7 +99,13 @@
     <Compile Include="EF\User.cs">
       <DependentUpon>ProjectDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\In_IRepo.cs" />
+    <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repo\IdeaRepo.cs" />
+    <Compile Include="Repo\InvestorRepo.cs" />
+    <Compile Include="Repo\MessageRepo.cs" />
+    <Compile Include="Repo\ReportRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EF\ProjectDB.edmx">
@@ -129,9 +135,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
