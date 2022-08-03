@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class ReportRepo : In_IRepo<Report, string>
+    internal class ReportRepo : In_IRepo<Report, int>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -22,7 +22,7 @@ namespace DAL.Repo
             throw new NotImplementedException();
         }
 
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -32,7 +32,7 @@ namespace DAL.Repo
             throw new NotImplementedException();
         }
 
-        public Report Get(string id)
+        public Report Get(int id)
         {
             throw new NotImplementedException();
         }

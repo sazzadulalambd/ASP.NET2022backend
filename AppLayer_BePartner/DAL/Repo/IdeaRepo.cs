@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class IdeaRepo : In_IRepo<Idea, string>
+    internal class IdeaRepo : In_IRepo<Idea, int>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -19,27 +19,52 @@ namespace DAL.Repo
 
         public bool Create(Idea obj)
         {
-            throw new NotImplementedException();
+            db.Ideas.Add(obj);
+            var l = db.SaveChanges();
+            if(l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            var idea = Get(id);
+            db.Ideas.Remove(idea);
+            var l = db.SaveChanges();
+            if( l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Idea> Get()
         {
-            throw new NotImplementedException();
+            var data = (from I in db.Ideas where !I.Status.Equals("Confirmed") select I).ToList();
+            return data;
         }
 
-        public Idea Get(string id)
+        public Idea Get(int id)
         {
-            throw new NotImplementedException();
+            return db.Ideas.FirstOrDefault(s => s.PostId == id);
         }
 
         public bool Update(Idea obj)
         {
-            throw new NotImplementedException();
+            var idea = db.Ideas.FirstOrDefault(s => s.Company_Name.Equals(obj.Company_Name));
+
+            idea.Status = obj.Status;
+            idea.In_Asp_Email = obj.In_Asp_Email;
+            idea.Asking_Amount = obj.Asking_Amount;
+            idea.Asking_Share = obj.Asking_Share;
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

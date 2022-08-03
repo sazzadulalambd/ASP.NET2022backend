@@ -101,10 +101,12 @@
     </Compile>
     <Compile Include="Interfaces\In_IRepo.cs" />
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\In_MsgRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repo\IdeaRepo.cs" />
     <Compile Include="Repo\InvestorRepo.cs" />
     <Compile Include="Repo\MessageRepo.cs" />
+    <Compile Include="Repo\OfferRepo.cs" />
     <Compile Include="Repo\ReportRepo.cs" />
   </ItemGroup>
   <ItemGroup>

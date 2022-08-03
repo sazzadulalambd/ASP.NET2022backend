@@ -20,17 +20,17 @@ namespace DAL
             return new InvestorRepo(db);
         }
 
-        public static In_IRepo<Idea, string> IdeaDataAccess()
+        public static In_IRepo<Idea, int> IdeaDataAccess()
         {
             return new IdeaRepo(db);
         }
 
-        public static In_IRepo<Message, string> MessageDataAccess()
+        public static In_IRepo<Message, int> MessageDataAccess()
         {
             return new MessageRepo(db);
         }
 
-        public static In_IRepo<Report, string> ReportDataAccess()
+        public static In_IRepo<Report, int> ReportDataAccess()
         {
             return new ReportRepo(db);
         }

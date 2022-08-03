@@ -19,27 +19,67 @@ namespace DAL.Repo
 
         public bool Create(Investor obj)
         {
-            throw new NotImplementedException();
+            db.Investors.Add(obj);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
-        public bool Delete(string id)
+        public bool Delete(string email)
         {
-            throw new NotImplementedException();
+            var investor = Get(email);
+            db.Investors.Remove(investor);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Investor> Get()
         {
-            throw new NotImplementedException();
+            return db.Investors.ToList();
         }
 
-        public Investor Get(string id)
+        public Investor Get(string email)
         {
-            throw new NotImplementedException();
+            return db.Investors.FirstOrDefault(s => s.In_Email.Equals(email));
         }
 
-        public bool Update(Investor obj)
+        public bool Update(Investor In)
         {
-            throw new NotImplementedException();
+            var Ed = (from I in db.Investors where I.In_Email.Equals(In.In_Email) select I).FirstOrDefault();
+            Ed.FirstName = In.FirstName;
+            Ed.LastName = In.LastName;
+            Ed.Gender = In.Gender;
+            Ed.Dob = In.Dob;
+            Ed.Phone = In.Phone;
+            Ed.Nid = In.Nid;
+            Ed.Address = In.Address;
+            //Ed.In_Email = In.In_Email;
+
+            Ed.OrgName = In.OrgName;
+            Ed.OrgEstablished = In.OrgEstablished;
+            Ed.OrgLocation = In.OrgLocation;
+            Ed.OrgEmail = In.OrgEmail;
+            Ed.OrgPhone = In.OrgPhone;
+            Ed.OrgLicense = In.OrgLicense;
+            Ed.Tin = In.Tin;
+            Ed.OrgSite = In.OrgSite;
+
+            try
+            {
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
