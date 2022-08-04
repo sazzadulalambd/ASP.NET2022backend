@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class IdeaRepo : In_IRepo<Idea, int>
+    internal class IdeaRepo : In_IRepo<Idea, int>, In_IdeaIRepo<Idea, string>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -49,6 +49,12 @@ namespace DAL.Repo
         public Idea Get(int id)
         {
             return db.Ideas.FirstOrDefault(s => s.PostId == id);
+        }
+
+        public List<Idea> GetMyInvestment(string email)
+        {
+            var En = (from I in db.Ideas where I.In_Asp_Email.Equals(email) select I).ToList();
+            return En;
         }
 
         public bool Update(Idea obj)

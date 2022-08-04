@@ -1,4 +1,5 @@
-﻿using DAL.EF;
+﻿using AutoMapper;
+using DAL.EF;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;

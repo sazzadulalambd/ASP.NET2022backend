@@ -22,3 +22,8 @@ E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\AutoMapper.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\AutoMapper.xml
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\BLL.dll.config
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\EntityFramework.SqlServer.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\EntityFramework.SqlServer.xml

@@ -136,3 +136,13 @@ E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\obj\Debug\AppLayer_BePartner.csproj.CopyComplete
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\obj\Debug\AppLayer_BePartner.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\obj\Debug\AppLayer_BePartner.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\DAL.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\EntityFramework.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\DAL.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\DAL.dll.config
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\EntityFramework.xml
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\AutoMapper.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\AutoMapper.xml
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\EntityFramework.SqlServer.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\BLL.dll.config
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\AppLayer_BePartner\bin\EntityFramework.SqlServer.xml

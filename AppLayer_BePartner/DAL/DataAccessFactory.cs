@@ -35,18 +35,23 @@ namespace DAL
             return new ReportRepo(db);
         }
 
+        public static In_IRepo<Entrepreneur, string> EntrepreneurDataAccess()
+        {
+            return new EntrepreneurRepo(db);
+        }
+
         //************** INVESTOR **************//
 
 
 
         //************** ADMIN **************//
-            //code here
+        //code here
         //************** ADMIN **************//
 
 
 
         //************** EMPLOYEE **************//
-            //code here
+        //code here
         //************** EMPLOYEE **************//
     }
 }
