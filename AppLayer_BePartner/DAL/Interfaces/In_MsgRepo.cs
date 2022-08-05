@@ -8,7 +8,7 @@ namespace DAL.Interfaces
 {
     public interface In_MsgRepo<CLASS, ID>
     {
-        List<CLASS> GetByEmail(ID email);
+        List<CLASS> GetByEmails(ID email);
         bool DeleteByEmial(ID email);
     }
 }

@@ -9,73 +9,77 @@ using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
-    public class IdeaController : ApiController
+    public class MessageController : ApiController
     {
-        [Route("api/idea/all")]
+        [Route("api/message/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = IdeaServices.Get();
+            var data = MessageServices.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/idea/get/{id}")]
+        [Route("api/message/get/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
-            var data = IdeaServices.Get(id);
+            var data = MessageServices.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/idea/create")]
+        [Route("api/message/create")]
         [HttpPost]
-        public HttpResponseMessage Create(IdeaModel s)
+        public HttpResponseMessage Create(MessageModel s)
         {
-            if (IdeaServices.Create(s))
+            if (MessageServices.Create(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data inserted");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/idea/update")]
+        [Route("api/message/update")]
         [HttpPost]
-        public HttpResponseMessage Update(IdeaModel s)
+        public HttpResponseMessage Update(MessageModel s)
         {
-            if (IdeaServices.Update(s))
+            if (MessageServices.Update(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data updated");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/idea/delete/{id}")]
+        [Route("api/message/delete/{id}")]
         [HttpGet]
         public HttpResponseMessage Delete(int id)
         {
-            if (IdeaServices.Delete(id))
+            if (MessageServices.Delete(id))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/idea/email/{id}")]
+        [Route("api/message/massager/{id}")]
         [HttpGet]
-        public HttpResponseMessage GetByEnEmail(string id)
+        public HttpResponseMessage GetByEmail(string id)
         {
-            id = id + ".com";
-            var data = IdeaServices.GetByEnEmail(id);
+            id += ".com";
+            var data = MessageServices.GetByEmail(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/idea/myinvestment/{id}")]
+        [Route("api/message/delemail/{id}")]
         [HttpGet]
-        public HttpResponseMessage MyInvestment(string id)
+        public HttpResponseMessage DeleteByEmail(string id)
         {
-            id = id + ".com";
-            var data = IdeaServices.MyInvestment(id);
-            return Request.CreateResponse(HttpStatusCode.OK, data);
+            id += ".com";
+            if (MessageServices.DeleteByEmail(id))
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");
+            }
+            return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
+
     }
 }

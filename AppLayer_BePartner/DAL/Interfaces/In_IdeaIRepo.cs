@@ -9,5 +9,6 @@ namespace DAL.Interfaces
     public interface In_IdeaIRepo<CLASS, ID>
     {
         List<CLASS> GetMyInvestment(ID email);
+        CLASS GetByEnEmail(ID email);
     }
 }

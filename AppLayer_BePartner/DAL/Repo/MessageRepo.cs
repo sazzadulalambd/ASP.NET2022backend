@@ -66,7 +66,7 @@ namespace DAL.Repo
             return message;
         }
 
-        public List<Message> GetByEmail(string email)
+        public List<Message> GetByEmails(string email)
         {
             var msgs = (from I in db.Messages where I.Sender.Equals(email) || I.Receiver.Equals(email) select I).ToList();
             return msgs;

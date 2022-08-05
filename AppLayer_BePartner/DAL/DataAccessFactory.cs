@@ -25,7 +25,17 @@ namespace DAL
             return new IdeaRepo(db);
         }
 
+        public static In_IdeaIRepo<Idea, string> IdeaDataByEmailAccess()
+        {
+            return new IdeaRepo(db);
+        }
+
         public static In_IRepo<Message, int> MessageDataAccess()
+        {
+            return new MessageRepo(db);
+        }
+
+        public static In_MsgRepo<Message, string> MessageByEmailccess()
         {
             return new MessageRepo(db);
         }

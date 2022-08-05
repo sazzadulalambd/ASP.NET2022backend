@@ -54,7 +54,7 @@ namespace BLL.Services
 
         public static InvestorModel Get(string email)
         {
-            email = email + ".com";
+            //email = email + ".com";
             var item = DataAccessFactory.InvestorDataAccess().Get(email);
             if(item != null)
             {
@@ -156,7 +156,7 @@ namespace BLL.Services
 
         public static bool Delete(string email)
         {
-            email = email + ".com";
+            //email = email + ".com";
             return DataAccessFactory.InvestorDataAccess().Delete(email);
         }
 

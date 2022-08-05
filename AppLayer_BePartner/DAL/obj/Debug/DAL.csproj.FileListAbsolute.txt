@@ -13,8 +13,10 @@ E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\DAL.dll.config
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\DAL.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\DAL.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\AutoMapper.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\EntityFramework.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\AutoMapper.xml
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\EntityFramework.xml
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\EntityFramework.SqlServer.xml
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
@@ -22,5 +24,3 @@ E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\obj\Debug\DAL.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\obj\Debug\DAL.pdb
-E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\AutoMapper.dll
-E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\bin\Debug\AutoMapper.xml

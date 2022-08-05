@@ -154,6 +154,24 @@
     <Property Name="Due_time" Type="date" Nullable="false" />
     <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
   </EntityType>
+  <EntityType Name="Tokens">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tkey" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ExpiredAt" Type="datetime" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <Association Name="FK_Ideas_Entrepreneurs">
     <End Role="Entrepreneurs" Type="Self.Entrepreneurs" Multiplicity="1" />
     <End Role="Ideas" Type="Self.Ideas" Multiplicity="*" />
@@ -224,6 +242,8 @@
     <EntitySet Name="Offers" EntityType="Self.Offers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Ideas_Entrepreneurs" Association="Self.FK_Ideas_Entrepreneurs">
       <End Role="Entrepreneurs" EntitySet="Entrepreneurs" />
       <End Role="Ideas" EntitySet="Ideas" />

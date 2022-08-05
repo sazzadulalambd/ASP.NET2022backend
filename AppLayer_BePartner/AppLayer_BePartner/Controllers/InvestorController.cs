@@ -23,6 +23,7 @@ namespace AppLayer_BePartner.Controllers
         [HttpGet]
         public HttpResponseMessage Get(string id)
         {
+            id = id + ".com";
             var data = InvestorService.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
@@ -53,6 +54,7 @@ namespace AppLayer_BePartner.Controllers
         [HttpGet]
         public HttpResponseMessage Delete(string id)
         {
+            id = id + ".com";
             if (InvestorService.Delete(id))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");

@@ -51,6 +51,11 @@ namespace DAL.Repo
             return db.Ideas.FirstOrDefault(s => s.PostId == id);
         }
 
+        public Idea GetByEnEmail(string email)
+        {
+            return db.Ideas.FirstOrDefault(s => s.En_Post_Email.Equals(email));
+        }
+
         public List<Idea> GetMyInvestment(string email)
         {
             var En = (from I in db.Ideas where I.In_Asp_Email.Equals(email) select I).ToList();
@@ -63,8 +68,9 @@ namespace DAL.Repo
 
             idea.Status = obj.Status;
             idea.In_Asp_Email = obj.In_Asp_Email;
-            idea.Asking_Amount = obj.Asking_Amount;
-            idea.Asking_Share = obj.Asking_Share;
+            idea.Offer_Amount = obj.Offer_Amount;
+            idea.Offer_Share = obj.Offer_Share;
+            idea.Message = obj.Message;
             var l = db.SaveChanges();
             if (l > 0)
             {
