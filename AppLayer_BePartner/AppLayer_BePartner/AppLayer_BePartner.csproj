@@ -93,7 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\InValid.cs" />
     <Compile Include="Controllers\IdeaController.cs" />
+    <Compile Include="Controllers\InAuthController.cs" />
     <Compile Include="Controllers\InvestorController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\OfferController.cs" />

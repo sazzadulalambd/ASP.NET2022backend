@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class OfferRepo : In_IRepo<Offer, int>
+    internal class OfferRepo : In_IRepo<Offer, int>, In_OfferIRepo<Offer, string>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -39,6 +39,36 @@ namespace DAL.Repo
             return false;
         }
 
+        public bool DeleteByEnEmail(string email)
+        {
+            var offers = (from I in db.Offers where I.En_Email.Equals(email) select I).ToList();
+            foreach (var offer in offers)
+            {
+                db.Offers.Remove(offer);
+            }
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteByInEmail(string email)
+        {
+            var offers = (from I in db.Offers where I.In_Email.Equals(email) select I).ToList();
+            foreach (var offer in offers)
+            {
+                db.Offers.Remove(offer);
+            }
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public List<Offer> Get()
         {
             return db.Offers.ToList();
@@ -47,6 +77,12 @@ namespace DAL.Repo
         public Offer Get(int id)
         {
             return db.Offers.FirstOrDefault(o => o.Id == id);
+        }
+
+        public List<Offer> MySentOffer(string email)
+        {
+            var offers = (from I in db.Offers where I.In_Email.Equals(email) select I).ToList();
+            return offers;
         }
 
         public bool Update(Offer obj)

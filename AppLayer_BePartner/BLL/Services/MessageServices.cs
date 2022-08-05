@@ -111,11 +111,11 @@ namespace BLL.Services
                     Im.ReceiverPhone = R.Phone;
                     Im.ReceiverCompany = IdeaServices.GetByEnEmail(item.Receiver).Company_Name;
 
-                    Im.SenderName = null;
-                    Im.SenderOccupation = null;
-                    Im.SenderImg = null;
-                    Im.SenderCompany = null;
-                    Im.SenderPhone = null;
+                    //Im.SenderName = null;
+                    //Im.SenderOccupation = null;
+                    //Im.SenderImg = null;
+                    //Im.SenderCompany = null;
+                    //Im.SenderPhone = null;
                 }
                 else
                 {
@@ -127,11 +127,11 @@ namespace BLL.Services
                     Im.SenderPhone = R.Phone;
                     Im.SenderCompany = IdeaServices.GetByEnEmail(item.Sender).Company_Name;
 
-                    Im.ReceiverName = null;
-                    Im.ReceiverOccupation = null;
-                    Im.ReceiverImg = null;
-                    Im.ReceiverCompany = null;
-                    Im.ReceiverPhone= null;
+                    //Im.ReceiverName = null;
+                    //Im.ReceiverOccupation = null;
+                    //Im.ReceiverImg = null;
+                    //Im.ReceiverCompany = null;
+                    //Im.ReceiverPhone= null;
                 }
                 messages.Add(Im);
             }

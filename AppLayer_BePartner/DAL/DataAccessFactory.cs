@@ -50,6 +50,30 @@ namespace DAL
             return new EntrepreneurRepo(db);
         }
 
+        public static In_IRepo<Offer, int> OfferDataAccess()
+        {
+            return new OfferRepo(db);
+        }
+
+        public static In_OfferIRepo<Offer, string> OfferMoreDataAccess()
+        {
+            return new OfferRepo(db);
+        }
+
+        public static In_IRepo<User,int> GetUserDataAccess()
+        {
+            return new UserRepo(db);
+        }
+
+        public static IAuth<User> GetAuthDataAccess()
+        {
+            return new UserRepo(db);
+        }
+
+        public static In_IRepo<Token, string> GetTokenDataAccess()
+        {
+            return new TokenRepo(db);
+        }
         //************** INVESTOR **************//
 
 
