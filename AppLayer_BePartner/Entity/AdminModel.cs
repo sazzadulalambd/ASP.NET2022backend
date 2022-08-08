@@ -8,6 +8,7 @@ namespace Entity
 {
     public class AdminModel
     {
+        public int ID { get; set; }
         public string Ad_Email { get; set; }
 
         public string FirstName { get; set; }

@@ -41,15 +41,7 @@ namespace DAL
             return new MessageRepo(db);
         }
 
-        public static In_IRepo<Report, int> ReportDataAccess()
-        {
-            return new ReportRepo(db);
-        }
-
-        public static In_IRepo<Entrepreneur, string> EntrepreneurDataAccess()
-        {
-            return new EntrepreneurRepo(db);
-        }
+        
 
         public static In_IRepo<Offer, int> OfferDataAccess()
         {
@@ -84,12 +76,25 @@ namespace DAL
         {
             return new AdminRepo(db);
         }
+
+        public static AD_IRepo<Report, int> ReportDataAccess()
+        {
+            return new ReportRepo(db);
+        }
+
+        public static Report_IRepo<Report, String> ReportgetSRDataAccess()
+        {
+            return new ReportRepo(db);
+        }
         //************** ADMIN **************//
 
 
 
         //************** EMPLOYEE **************//
-        //code here
+        public static In_IRepo<Entrepreneur, string> EntrepreneurDataAccess()
+        {
+            return new EntrepreneurRepo(db);
+        }
         //************** EMPLOYEE **************//
     }
 }

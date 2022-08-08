@@ -32,8 +32,6 @@ public partial class bePartnerCentralDatabaseEntities : DbContext
     }
 
 
-    public virtual DbSet<Admin> Admins { get; set; }
-
     public virtual DbSet<Employee> Employees { get; set; }
 
     public virtual DbSet<Entrepreneur> Entrepreneurs { get; set; }
@@ -48,11 +46,13 @@ public partial class bePartnerCentralDatabaseEntities : DbContext
 
     public virtual DbSet<Report> Reports { get; set; }
 
-    public virtual DbSet<Task> Tasks { get; set; }
-
     public virtual DbSet<Token> Tokens { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
+    public virtual DbSet<Admin> Admins { get; set; }
+
+    public virtual DbSet<Notice> Notices { get; set; }
 
 }
 

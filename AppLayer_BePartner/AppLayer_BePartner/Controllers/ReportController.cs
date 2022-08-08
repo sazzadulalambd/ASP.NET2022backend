@@ -9,54 +9,62 @@ using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
-    public class AdminController : ApiController
+    public class ReportController : ApiController
     {
-
-        [Route("api/Admin/get/all")]
+        [Route("api/Report/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = AdminService.Get();
+            var data = ReportService.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/get/{id}")]
+        [Route("api/Report/Recived/{id}")]
         [HttpGet]
-        public HttpResponseMessage Get(string id)
+        public HttpResponseMessage recivedByEmails(string email)
         {
-            id = id + ".com";
-            var data = AdminService.Get(id);
+            email = email + ".com";
+            var data = ReportService.recivedByEmails(email);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/create")]
-        [HttpPost]
-        public HttpResponseMessage Create(AdminModel s)
+        [Route("api/Report/send/{id}")]
+        [HttpGet]
+        public HttpResponseMessage sendByEmails(string email)
         {
-            if (AdminService.Create(s))
+            email = email + ".com";
+            var data = ReportService.sendByEmails(email);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/Report/create")]
+        [HttpPost]
+        public HttpResponseMessage Create(ReportModel s)
+        {
+            if (ReportService.Create(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data inserted");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/update")]
+        [Route("api/Report/update")]
         [HttpPost]
-        public HttpResponseMessage Update(AdminModel s)
+        public HttpResponseMessage Update(ReportModel s)
         {
-            if (AdminService.Update(s))
+            if (ReportService.Update(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data updated");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/delete/{id}")]
+        [Route("api/Report/delete/{id}")]
         [HttpPost]
-        public HttpResponseMessage Delete(string id)
+        public HttpResponseMessage Delete(int id)
         {
-            id = id + ".com";
-            if (AdminService.Delete(id))
+            
+            if (ReportService.Delete(id))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");
             }

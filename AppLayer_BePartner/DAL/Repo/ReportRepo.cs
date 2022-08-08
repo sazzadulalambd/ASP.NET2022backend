@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class ReportRepo : In_IRepo<Report, int>
+    internal class ReportRepo : AD_IRepo<Report, int> , Report_IRepo<Report, string>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -17,29 +17,76 @@ namespace DAL.Repo
             this.db = db;
         }
 
-        public bool Create(Report obj)
+        public bool Create(Report ADS)
         {
-            throw new NotImplementedException();
+            db.Reports.Add(ADS);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
-        public bool Delete(int id)
+        public bool Delete(int ID)
         {
-            throw new NotImplementedException();
+            var Report = Get(ID);
+            db.Reports.Remove(Report);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Report> Get()
         {
-            throw new NotImplementedException();
+            return db.Reports.ToList();
         }
 
-        public Report Get(int id)
+        public Report Get(int ID)
         {
-            throw new NotImplementedException();
+            return db.Reports.FirstOrDefault(s => s.ReportId.Equals(ID));
         }
 
-        public bool Update(Report obj)
+        public bool Update(Report Ads)
         {
-            throw new NotImplementedException();
+            var RE = (from I in db.Reports where I.ReportId.Equals(Ads.ReportId) select I).FirstOrDefault();
+            if (RE != null)
+            {
+                RE.sender = Ads.sender;
+                RE.Receiver = Ads.Receiver;
+                RE.Title = Ads.Title;
+                RE.Description = Ads.Description;
+                RE.Report_Time = Ads.Report_Time;
+                RE.Status = Ads.Status;
+            }    
+            
+            try
+            {
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<Report> sendByEmails(string SD_email)
+        {
+            
+            var REPO = (from I in db.Reports where I.sender.Equals(SD_email) select I).ToList();
+            return REPO;
+            
+        }
+
+        public List<Report> recivedByEmails(string RC_email)
+        {
+            //return db.Reports.FirstOrDefault(s => s.Receiver.Equals(RC_email));
+            var REPO = (from I in db.Reports where I.Receiver.Equals(RC_email) select I).ToList();
+            return REPO;
         }
     }
 }

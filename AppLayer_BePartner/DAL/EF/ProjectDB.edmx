@@ -9,6 +9,7 @@
           <Key>
             <PropertyRef Name="Ad_Email" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ad_Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
@@ -123,6 +124,17 @@
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Time" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="Notices">
+          <Key>
+            <PropertyRef Name="Notice_Id" />
+          </Key>
+          <Property Name="Notice_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="5000" Nullable="false" />
+          <Property Name="Issue_time" Type="date" Nullable="false" />
+          <Property Name="Due_time" Type="date" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="Offers">
           <Key>
             <PropertyRef Name="Id" />
@@ -147,17 +159,6 @@
           <Property Name="Description" Type="varchar" MaxLength="5000" Nullable="false" />
           <Property Name="Report_Time" Type="date" />
           <Property Name="Status" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="Tasks">
-          <Key>
-            <PropertyRef Name="TaskId" />
-          </Key>
-          <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Subject" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Task_Description" Type="varchar" MaxLength="5000" Nullable="false" />
-          <Property Name="Issue_time" Type="date" Nullable="false" />
-          <Property Name="Due_time" Type="date" Nullable="false" />
-          <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
         </EntityType>
         <EntityType Name="Tokens">
           <Key>
@@ -244,9 +245,9 @@
           <EntitySet Name="Ideas" EntityType="Self.Ideas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Investors" EntityType="Self.Investors" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Offers" EntityType="Self.Offers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Ideas_Entrepreneurs" Association="Self.FK_Ideas_Entrepreneurs">
@@ -274,22 +275,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bePartnerCentralDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Admin">
-          <Key>
-            <PropertyRef Name="Ad_Email" />
-          </Key>
-          <Property Name="Ad_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Address" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Security_key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Nid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Emp_Email" />
@@ -427,17 +412,6 @@
           <Property Name="Report_Time" Type="DateTime" Precision="0" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Task">
-          <Key>
-            <PropertyRef Name="TaskId" />
-          </Key>
-          <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Task_Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Issue_time" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Due_time" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
         <Association Name="FK_Ideas_Entrepreneurs">
           <End Role="Entrepreneurs" Type="Self.Entrepreneur" Multiplicity="1" />
           <End Role="Ideas" Type="Self.Idea" Multiplicity="*" />
@@ -499,7 +473,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="bePartnerCentralDatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Entrepreneurs" EntityType="Self.Entrepreneur" />
           <EntitySet Name="Ideas" EntityType="Self.Idea" />
@@ -507,7 +480,6 @@
           <EntitySet Name="Messages" EntityType="Self.Message" />
           <EntitySet Name="Offers" EntityType="Self.Offer" />
           <EntitySet Name="Reports" EntityType="Self.Report" />
-          <EntitySet Name="Tasks" EntityType="Self.Task" />
           <AssociationSet Name="FK_Ideas_Entrepreneurs" Association="Self.FK_Ideas_Entrepreneurs">
             <End Role="Entrepreneurs" EntitySet="Entrepreneurs" />
             <End Role="Ideas" EntitySet="Ideas" />
@@ -530,6 +502,8 @@
           </AssociationSet>
           <EntitySet Name="Tokens" EntityType="bePartnerCentralDatabaseModel.Token" />
           <EntitySet Name="Users" EntityType="bePartnerCentralDatabaseModel.User" />
+          <EntitySet Name="Admins" EntityType="bePartnerCentralDatabaseModel.Admin" />
+          <EntitySet Name="Notices" EntityType="bePartnerCentralDatabaseModel.Notice" />
         </EntityContainer>
         <EntityType Name="Token">
           <Key>
@@ -549,29 +523,40 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Ad_Email" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Security_key" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Nid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Notice">
+          <Key>
+            <PropertyRef Name="Notice_Id" />
+          </Key>
+          <Property Name="Notice_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_time" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Due_time" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="bePartnerCentralDatabaseModelStoreContainer" CdmEntityContainer="bePartnerCentralDatabaseEntities">
-          <EntitySetMapping Name="Admins">
-            <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Admin">
-              <MappingFragment StoreEntitySet="Admins">
-                <ScalarProperty Name="Ad_Email" ColumnName="Ad_Email" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Dob" ColumnName="Dob" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Security_key" ColumnName="Security_key" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Nid" ColumnName="Nid" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Img" ColumnName="Img" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
@@ -706,18 +691,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Tasks">
-            <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Task">
-              <MappingFragment StoreEntitySet="Tasks">
-                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
-                <ScalarProperty Name="Subject" ColumnName="Subject" />
-                <ScalarProperty Name="Task_Description" ColumnName="Task_Description" />
-                <ScalarProperty Name="Issue_time" ColumnName="Issue_time" />
-                <ScalarProperty Name="Due_time" ColumnName="Due_time" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Tokens">
             <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Token">
               <MappingFragment StoreEntitySet="Tokens">
@@ -735,6 +708,36 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Admin">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Nid" ColumnName="Nid" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Security_key" ColumnName="Security_key" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Ad_Email" ColumnName="Ad_Email" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notices">
+            <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Notice">
+              <MappingFragment StoreEntitySet="Notices">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Due_time" ColumnName="Due_time" />
+                <ScalarProperty Name="Issue_time" ColumnName="Issue_time" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Notice_Id" ColumnName="Notice_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
