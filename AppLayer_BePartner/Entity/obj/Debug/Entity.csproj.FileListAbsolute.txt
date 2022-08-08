@@ -1,0 +1,12 @@
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\Entity.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\Entity.pdb
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\EntityFramework.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.pdb
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.dll.config
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\EntityFramework.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.CopyComplete
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.pdb
