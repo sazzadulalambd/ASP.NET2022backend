@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\InValid.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\IdeaController.cs" />
     <Compile Include="Controllers\InAuthController.cs" />
     <Compile Include="Controllers\InvestorController.cs" />
@@ -121,6 +122,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{7339fbec-8ec9-4a4c-b836-1acf2718744e}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{e7babaf3-f660-4343-bb10-7836c948b004}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

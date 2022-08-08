@@ -64,6 +64,7 @@
     <Compile Include="Security\PassSecurity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\RandomToken.cs" />
+    <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\EntrepreneurServices.cs" />
     <Compile Include="Services\IdeaServices.cs" />
@@ -75,6 +76,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{94c88e38-5a84-417e-b281-9b4352926fef}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{e7babaf3-f660-4343-bb10-7836c948b004}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

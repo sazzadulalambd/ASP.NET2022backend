@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\EF\ProjectDB.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\DAL\EF\ProjectDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

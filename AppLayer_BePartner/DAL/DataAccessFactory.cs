@@ -1,4 +1,5 @@
-﻿using DAL.EF;
+﻿
+using DAL.EF;
 using DAL.Interfaces;
 using DAL.Repo;
 using System;
@@ -79,7 +80,10 @@ namespace DAL
 
 
         //************** ADMIN **************//
-        //code here
+        public static AD_IRepo<Admin, string> AdminDataAccess()
+        {
+            return new AdminRepo(db);
+        }
         //************** ADMIN **************//
 
 
