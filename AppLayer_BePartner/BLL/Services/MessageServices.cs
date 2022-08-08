@@ -103,7 +103,7 @@ namespace BLL.Services
 
                 if (item.Sender.Equals(email))
                 {
-                    var R = EntrepreneurServices.Get(item.Receiver);
+                    var R = EntrepreneurService.Get(item.Receiver);
 
                     Im.ReceiverName = R.FirstName + " " + R.LastName;
                     Im.ReceiverOccupation = R.Occupation;
@@ -119,7 +119,7 @@ namespace BLL.Services
                 }
                 else
                 {
-                    var R = EntrepreneurServices.Get(item.Sender);
+                    var R = EntrepreneurService.Get(item.Sender);
 
                     Im.SenderName = R.FirstName + " " + R.LastName;
                     Im.SenderOccupation = R.Occupation;

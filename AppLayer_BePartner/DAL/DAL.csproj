@@ -102,19 +102,23 @@
       <DependentUpon>ProjectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\AD_IRepo.cs" />
+    <Compile Include="Interfaces\EM_IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\In_IdeaIRepo.cs" />
     <Compile Include="Interfaces\In_IRepo.cs" />
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\In_MsgRepo.cs" />
     <Compile Include="Interfaces\In_OfferIRepo.cs" />
+    <Compile Include="Interfaces\Notice_IRepo.cs" />
     <Compile Include="Interfaces\Report_IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repo\AdminRepo.cs" />
+    <Compile Include="Repo\EmployeeRepo.cs" />
     <Compile Include="Repo\EntrepreneurRepo.cs" />
     <Compile Include="Repo\IdeaRepo.cs" />
     <Compile Include="Repo\InvestorRepo.cs" />
     <Compile Include="Repo\MessageRepo.cs" />
+    <Compile Include="Repo\NoticeRepo.cs" />
     <Compile Include="Repo\OfferRepo.cs" />
     <Compile Include="Repo\ReportRepo.cs" />
     <Compile Include="Repo\TokenRepo.cs" />

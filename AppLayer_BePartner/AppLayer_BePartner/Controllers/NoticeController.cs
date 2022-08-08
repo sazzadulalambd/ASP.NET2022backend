@@ -9,54 +9,54 @@ using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
-    public class AdminController : ApiController
+    public class NoticeController : ApiController
     {
 
-        [Route("api/Admin/get/all")]
+        [Route("api/Notice/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = AdminService.Get();
+            var data = NoticeService.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/get/{id}")]
+        [Route("api/Notice/get/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
             //id = id + ".com";
-            var data = AdminService.Get(id);
+            var data = NoticeService.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/create")]
+        [Route("api/Notice/create")]
         [HttpPost]
-        public HttpResponseMessage Create(AdminModel s)
+        public HttpResponseMessage Create(NoticeModel s)
         {
-            if (AdminService.Create(s))
+            if (NoticeService.Create(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data inserted");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/update")]
+        [Route("api/Notice/update")]
         [HttpPost]
-        public HttpResponseMessage Update(AdminModel s)
+        public HttpResponseMessage Update(NoticeModel s)
         {
-            if (AdminService.Update(s))
+            if (NoticeService.Update(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data updated");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/delete/{id}")]
+        [Route("api/Notice/delete/{id}")]
         [HttpPost]
         public HttpResponseMessage Delete(int id)
         {
             //id = id + ".com";
-            if (AdminService.Delete(id))
+            if (NoticeService.Delete(id))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");
             }

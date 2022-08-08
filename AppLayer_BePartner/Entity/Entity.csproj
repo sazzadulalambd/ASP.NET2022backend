@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminModel.cs" />
+    <Compile Include="EmployeeModel.cs" />
+    <Compile Include="EntrepreneurModel.cs" />
+    <Compile Include="NoticeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportModel.cs" />
   </ItemGroup>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class AdminRepo : AD_IRepo<Admin, string>
+    internal class AdminRepo : AD_IRepo<Admin, int>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -29,9 +29,9 @@ namespace DAL.Repo
             return false;
         }
 
-        public bool Delete(string AD_email)
+        public bool Delete(int id)
         {
-            var Admin = Get(AD_email);
+            var Admin = Get(id);
             db.Admins.Remove(Admin);
             var l = db.SaveChanges();
             if (l > 0)
@@ -46,14 +46,16 @@ namespace DAL.Repo
             return db.Admins.ToList();
         }
 
-        public Admin Get(string AD_email)
+        public Admin Get(int id)
         {
-            return db.Admins.FirstOrDefault(s => s.Ad_Email.Equals(AD_email));
+            return db.Admins.FirstOrDefault(s => s.ID.Equals(id));
         }
 
         public bool Update(Admin Ads)
         {
             var AD = (from I in db.Admins where I.Ad_Email.Equals(Ads.Ad_Email) select I).FirstOrDefault();
+
+            AD.Ad_Email = Ads.Ad_Email;
             AD .FirstName = Ads.FirstName;
             AD.LastName = Ads.LastName;
             AD.Dob = Ads.Dob;

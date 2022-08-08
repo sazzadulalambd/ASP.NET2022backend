@@ -72,7 +72,7 @@ namespace DAL
 
 
         //************** ADMIN **************//
-        public static AD_IRepo<Admin, string> AdminDataAccess()
+        public static AD_IRepo<Admin, int> AdminDataAccess()
         {
             return new AdminRepo(db);
         }
@@ -86,14 +86,23 @@ namespace DAL
         {
             return new ReportRepo(db);
         }
+
+        public static AD_IRepo<Notice, int> NoticeDataAccess()
+        {
+            return new NoticeRepo(db);
+        }
         //************** ADMIN **************//
 
 
 
         //************** EMPLOYEE **************//
-        public static In_IRepo<Entrepreneur, string> EntrepreneurDataAccess()
+        public static EM_IRepo<Entrepreneur, string> EntrepreneurDataAccess()
         {
             return new EntrepreneurRepo(db);
+        }
+        public static EM_IRepo<Employee,string> EmployeeDataAccess()
+        {
+            return new EmployeeRepo(db);
         }
         //************** EMPLOYEE **************//
     }

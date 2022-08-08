@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class EntrepreneurRepo : In_IRepo<Entrepreneur, string>
+    internal class EntrepreneurRepo : EM_IRepo<Entrepreneur, string>
     {
         bePartnerCentralDatabaseEntities db;
 
@@ -19,17 +19,30 @@ namespace DAL.Repo
 
         public bool Create(Entrepreneur obj)
         {
-            throw new NotImplementedException();
+            db.Entrepreneurs.Add(obj);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
-        public bool Delete(string id)
+        public bool Delete(string email)
         {
-            throw new NotImplementedException();
+            var Entrepreneur = Get(email);
+            db.Entrepreneurs.Remove(Entrepreneur);
+            var l = db.SaveChanges();
+            if (l > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Entrepreneur> Get()
         {
-            throw new NotImplementedException();
+            return db.Entrepreneurs.ToList();
         }
 
         public Entrepreneur Get(string email)
@@ -37,9 +50,29 @@ namespace DAL.Repo
             return db.Entrepreneurs.FirstOrDefault(s => s.En_Email.Equals(email));
         }
 
-        public bool Update(Entrepreneur obj)
+        public bool Update(Entrepreneur item)
         {
-            throw new NotImplementedException();
+            var ems = (from I in db.Entrepreneurs where I.En_Email.Equals(item.En_Email) select I).FirstOrDefault();
+            ems.En_Email = item.En_Email;
+            ems.FirstName = item.FirstName;
+            ems.LastName = item.LastName;
+            ems.Gender = item.Gender;
+            ems.Bob = item.Bob;
+            ems.Address = item.Address;
+            ems.Phone = item.Phone;
+            ems.Nid = item.Nid;
+            ems.Occupation = item.Occupation;
+            ems.Img = item.Img;
+            ems.Status = item.Status;
+            try
+            {
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

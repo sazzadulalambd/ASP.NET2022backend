@@ -9,54 +9,53 @@ using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
-    public class AdminController : ApiController
+    public class EmployeeController : ApiController
     {
-
-        [Route("api/Admin/get/all")]
+        [Route("api/Employee/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = AdminService.Get();
+            var data = EmployeeService.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/get/{id}")]
+        [Route("api/Employee/get/{id}")]
         [HttpGet]
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage Get(string id)
         {
-            //id = id + ".com";
-            var data = AdminService.Get(id);
+            id = id + ".com";
+            var data = EmployeeService.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/Admin/create")]
+        [Route("api/Employee/create")]
         [HttpPost]
-        public HttpResponseMessage Create(AdminModel s)
+        public HttpResponseMessage Create(EmployeeModel s)
         {
-            if (AdminService.Create(s))
+            if (EmployeeService.Create(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data inserted");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/update")]
+        [Route("api/Employee/update")]
         [HttpPost]
-        public HttpResponseMessage Update(AdminModel s)
+        public HttpResponseMessage Update(EmployeeModel s)
         {
-            if (AdminService.Update(s))
+            if (EmployeeService.Update(s))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data updated");
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/Admin/delete/{id}")]
-        [HttpPost]
-        public HttpResponseMessage Delete(int id)
+        [Route("api/Employee/delete/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Delete(string id)
         {
-            //id = id + ".com";
-            if (AdminService.Delete(id))
+            id = id + ".com";
+            if (EmployeeService.Delete(id))
             {
                 return Request.CreateResponse(HttpStatusCode.OK, "Data deleted");
             }

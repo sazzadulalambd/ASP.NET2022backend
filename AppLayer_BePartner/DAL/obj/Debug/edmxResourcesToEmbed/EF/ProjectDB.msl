@@ -1,23 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="bePartnerCentralDatabaseModelStoreContainer" CdmEntityContainer="bePartnerCentralDatabaseEntities">
-    <EntitySetMapping Name="Admins">
-      <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Admin">
-        <MappingFragment StoreEntitySet="Admins">
-          <ScalarProperty Name="Ad_Email" ColumnName="Ad_Email" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Dob" ColumnName="Dob" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Security_key" ColumnName="Security_key" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Nid" ColumnName="Nid" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Img" ColumnName="Img" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Employee">
         <MappingFragment StoreEntitySet="Employees">
@@ -152,18 +135,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Tasks">
-      <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Task">
-        <MappingFragment StoreEntitySet="Tasks">
-          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
-          <ScalarProperty Name="Subject" ColumnName="Subject" />
-          <ScalarProperty Name="Task_Description" ColumnName="Task_Description" />
-          <ScalarProperty Name="Issue_time" ColumnName="Issue_time" />
-          <ScalarProperty Name="Due_time" ColumnName="Due_time" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Tokens">
       <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Token">
         <MappingFragment StoreEntitySet="Tokens">
@@ -181,6 +152,36 @@
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Nid" ColumnName="Nid" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Security_key" ColumnName="Security_key" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Ad_Email" ColumnName="Ad_Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notices">
+      <EntityTypeMapping TypeName="bePartnerCentralDatabaseModel.Notice">
+        <MappingFragment StoreEntitySet="Notices">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Due_time" ColumnName="Due_time" />
+          <ScalarProperty Name="Issue_time" ColumnName="Issue_time" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Notice_Id" ColumnName="Notice_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

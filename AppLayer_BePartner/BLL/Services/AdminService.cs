@@ -20,6 +20,7 @@ namespace BLL.Services
             {
                 AdminModel AD = new AdminModel()
                 {
+                    ID = item.ID,
                     Ad_Email = item.Ad_Email,
                     FirstName = item.FirstName,
                     LastName = item.LastName,
@@ -41,13 +42,14 @@ namespace BLL.Services
             return Admins;
         }
 
-        public static AdminModel Get(string email)
+        public static AdminModel Get(int id)
         {
-            var item = DataAccessFactory.AdminDataAccess().Get(email);
+            var item = DataAccessFactory.AdminDataAccess().Get(id);
             if (item != null)
             {
                 AdminModel AD = new AdminModel()
                 {
+                    ID=item.ID,
                     Ad_Email = item.Ad_Email,
                     FirstName = item.FirstName,
                     LastName = item.LastName,
@@ -110,9 +112,9 @@ namespace BLL.Services
            
         }
 
-        public static bool Delete(string email)
+        public static bool Delete(int id)
         {
-            return DataAccessFactory.AdminDataAccess().Delete(email);
+            return DataAccessFactory.AdminDataAccess().Delete(id);
         }
     }
 }

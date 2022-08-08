@@ -95,10 +95,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\InValid.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EntrepreneurController.cs" />
     <Compile Include="Controllers\IdeaController.cs" />
     <Compile Include="Controllers\InAuthController.cs" />
     <Compile Include="Controllers\InvestorController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\NoticeController.cs" />
     <Compile Include="Controllers\OfferController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">

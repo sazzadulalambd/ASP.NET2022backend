@@ -4,6 +4,7 @@
     <Key>
       <PropertyRef Name="Ad_Email" />
     </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ad_Email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
@@ -118,6 +119,17 @@
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Time" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <EntityType Name="Notices">
+    <Key>
+      <PropertyRef Name="Notice_Id" />
+    </Key>
+    <Property Name="Notice_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="5000" Nullable="false" />
+    <Property Name="Issue_time" Type="date" Nullable="false" />
+    <Property Name="Due_time" Type="date" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
   <EntityType Name="Offers">
     <Key>
       <PropertyRef Name="Id" />
@@ -142,17 +154,6 @@
     <Property Name="Description" Type="varchar" MaxLength="5000" Nullable="false" />
     <Property Name="Report_Time" Type="date" />
     <Property Name="Status" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="Tasks">
-    <Key>
-      <PropertyRef Name="TaskId" />
-    </Key>
-    <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Subject" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Task_Description" Type="varchar" MaxLength="5000" Nullable="false" />
-    <Property Name="Issue_time" Type="date" Nullable="false" />
-    <Property Name="Due_time" Type="date" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
   </EntityType>
   <EntityType Name="Tokens">
     <Key>
@@ -239,9 +240,9 @@
     <EntitySet Name="Ideas" EntityType="Self.Ideas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Investors" EntityType="Self.Investors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Offers" EntityType="Self.Offers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Ideas_Entrepreneurs" Association="Self.FK_Ideas_Entrepreneurs">

@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entities\EntrepreneurModel.cs" />
     <Compile Include="Entities\IdeaModel.cs" />
     <Compile Include="Entities\InvestorMessageModel.cs" />
     <Compile Include="Entities\InvestorModel.cs" />
@@ -66,10 +65,12 @@
     <Compile Include="Security\RandomToken.cs" />
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AuthServices.cs" />
-    <Compile Include="Services\EntrepreneurServices.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Services\EntrepreneurService.cs" />
     <Compile Include="Services\IdeaServices.cs" />
     <Compile Include="Services\InvestorService.cs" />
     <Compile Include="Services\MessageServices.cs" />
+    <Compile Include="Services\NoticeService.cs" />
     <Compile Include="Services\OfferServices.cs" />
     <Compile Include="Services\ReportService.cs" />
   </ItemGroup>
