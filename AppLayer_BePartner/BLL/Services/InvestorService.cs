@@ -1,4 +1,4 @@
-﻿using BLL.Entities;
+﻿using Entity;
 using DAL;
 using DAL.EF;
 using System;
@@ -119,7 +119,17 @@ namespace BLL.Services
                 Img = item.Img
 
             };
-            return DataAccessFactory.InvestorDataAccess().Create(In);
+
+            if (DataAccessFactory.InvestorDataAccess().Create(In))
+            {
+                var u = new User()
+                {
+                    Email = item.In_Email,
+                    Password = PassSecurity.EnryptString(item.Password)
+                };
+                return DataAccessFactory.GetUserDataAccess().Create(u);
+            }
+            return false;
         }
 
         public static bool Update(InvestorModel item)

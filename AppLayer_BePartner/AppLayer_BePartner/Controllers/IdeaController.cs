@@ -1,14 +1,18 @@
-﻿using BLL.Entities;
+﻿
+using AppLayer_BePartner.Auth;
 using BLL.Services;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
+    [InValid]
     public class IdeaController : ApiController
     {
         [Route("api/idea/all")]
@@ -69,12 +73,13 @@ namespace AppLayer_BePartner.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
 
-        [Route("api/idea/myinvestment/{id}")]
+        //[Route("api/idea/myinvestment/{id}")]
+        [Route("api/idea/myinvestment")]
         [HttpGet]
-        public HttpResponseMessage MyInvestment(string id)
+        public HttpResponseMessage MyInvestment()
         {
-            id = id + ".com";
-            var data = IdeaServices.MyInvestment(id);
+            var auth = HttpContext.Current.Request.Headers["Authorization"];
+            var data = IdeaServices.MyInvestment(UserNameServices.Get(auth));
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
     }

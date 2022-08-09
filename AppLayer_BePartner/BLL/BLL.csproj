@@ -52,13 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entities\IdeaModel.cs" />
-    <Compile Include="Entities\InvestorMessageModel.cs" />
-    <Compile Include="Entities\InvestorModel.cs" />
-    <Compile Include="Entities\LoginModel.cs" />
-    <Compile Include="Entities\MessageModel.cs" />
-    <Compile Include="Entities\OfferModel.cs" />
-    <Compile Include="Entities\TokenModel.cs" />
     <Compile Include="Mapper\In_MappingProfile.cs" />
     <Compile Include="Security\PassSecurity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,12 +60,14 @@
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\EntrepreneurService.cs" />
+    <Compile Include="Services\EntrepreneurServices.cs" />
     <Compile Include="Services\IdeaServices.cs" />
     <Compile Include="Services\InvestorService.cs" />
     <Compile Include="Services\MessageServices.cs" />
     <Compile Include="Services\NoticeService.cs" />
     <Compile Include="Services\OfferServices.cs" />
     <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\UserNameServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

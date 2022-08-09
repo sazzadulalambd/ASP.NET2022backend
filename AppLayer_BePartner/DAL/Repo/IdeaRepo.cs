@@ -68,9 +68,34 @@ namespace DAL.Repo
 
             idea.Status = obj.Status;
             idea.In_Asp_Email = obj.In_Asp_Email;
+
+            idea.Asking_Amount = obj.Asking_Amount;
+            idea.Asking_Share = obj.Asking_Share;
+            
             idea.Offer_Amount = obj.Offer_Amount;
             idea.Offer_Share = obj.Offer_Share;
             idea.Message = obj.Message;
+            
+            idea.Company_Name = obj.Company_Name;
+            idea.Moto = obj.Moto;
+            idea.Description = obj.Description;
+            idea.Post_Time = DateTime.Now;
+            
+            
+            idea.Last_Month_profit = obj.Last_Month_profit;
+            idea.Last_Year_Profit = obj.Last_Year_Profit;
+            idea.Total_Profit = obj.Total_Profit;
+            idea.Valuation = obj.Valuation;
+
+            idea.Feature1_Title = obj.Feature1_Title;
+            idea.Feature2_Title = obj.Feature2_Title;
+            idea.Feature3_Title = obj.Feature3_Title;
+            idea.Feature4_Title = obj.Feature4_Title;
+            idea.Feature1_Des = obj.Feature1_Des;
+            idea.Feature2_Des = obj.Feature2_Des;
+            idea.Feature3_Des = obj.Feature3_Des;
+            idea.Feature4_Des = obj.Feature4_Des;
+
             var l = db.SaveChanges();
             if (l > 0)
             {

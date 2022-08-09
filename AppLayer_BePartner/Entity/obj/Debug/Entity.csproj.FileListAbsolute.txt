@@ -10,3 +10,15 @@ E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.cspro
 E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.CopyComplete
 E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.dll
 E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\Entity.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\Entity.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\EntityFramework.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.pdb
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\DAL.dll.config
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\bin\Debug\EntityFramework.xml
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.csproj.CopyComplete
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.dll
+E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\Entity\obj\Debug\Entity.pdb

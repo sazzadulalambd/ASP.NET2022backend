@@ -1,4 +1,4 @@
-﻿using BLL.Entities;
+﻿using Entity;
 using BLL.Security;
 using DAL;
 using DAL.EF;
@@ -14,6 +14,7 @@ namespace BLL.Services
     {
         public static TokenModel Authenticate(string email, string pass)
         {
+            pass = PassSecurity.EnryptString(pass);
             var user = DataAccessFactory.GetAuthDataAccess().Authenticate(email, pass);
             TokenModel t = new TokenModel();
             if(user != null)
@@ -44,12 +45,29 @@ namespace BLL.Services
 
         }
 
-        public static bool Logout(TokenModel tk)
+        public static bool Logout(string tk)
         {
-            var d_tk = DataAccessFactory.GetTokenDataAccess().Get(tk.Tkey);
+            var d_tk = DataAccessFactory.GetTokenDataAccess().Get(tk);
             d_tk.ExpiredAt = DateTime.Now;
             return DataAccessFactory.GetTokenDataAccess().Update(d_tk);
 
+        }
+
+        public static List<LoginModel> Get()
+        {
+            var data = DataAccessFactory.GetUserDataAccess().Get();
+            var users = new List<LoginModel>();
+
+            foreach(var item in data)
+            {
+                var user = new LoginModel()
+                {
+                    Username = item.Email,
+                    Password = PassSecurity.DecryptString(item.Password)
+                };
+                users.Add(user);
+            }
+            return users;
         }
     }
 }

@@ -1,14 +1,18 @@
-﻿using BLL.Entities;
+﻿
+using AppLayer_BePartner.Auth;
 using BLL.Services;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
+    [InValid]
     public class InvestorController : ApiController
     {
         [Route("api/investor/get/all")]
@@ -17,6 +21,15 @@ namespace AppLayer_BePartner.Controllers
         {
             var data = InvestorService.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/investor/at")]
+        [HttpGet]
+        public HttpResponseMessage Gett()
+        {
+            string authHeader = HttpContext.Current.Request.Headers["Authorization"];
+            //var data = InvestorService.Get();
+            return Request.CreateResponse(HttpStatusCode.OK, authHeader);
         }
 
         [Route("api/investor/get/{id}")]

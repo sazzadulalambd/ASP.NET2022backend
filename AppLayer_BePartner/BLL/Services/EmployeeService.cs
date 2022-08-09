@@ -20,20 +20,20 @@ namespace BLL.Services
             {
                 EmployeeModel EEM = new EmployeeModel()
                 {
-                Emp_Email=EM.Emp_Email,
-                FirstName = EM.FirstName,
-                LastName = EM.LastName,
-                Dob = EM.Dob,
-                Address = EM.Address,
-                Phone = EM.Phone,
-                Security_key = EM.Security_key,
-                Gender = EM.Gender,
-                Nid = EM.Nid,
-                Password = EM.Password,
-                Img = EM.Img,
-                Status = EM.Status
+                    Emp_Email = EM.Emp_Email,
+                    FirstName = EM.FirstName,
+                    LastName = EM.LastName,
+                    Dob = EM.Dob,
+                    Address = EM.Address,
+                    Phone = EM.Phone,
+                    Security_key = EM.Security_key,
+                    Gender = EM.Gender,
+                    Nid = EM.Nid,
+                    Password = EM.Password,
+                    Img = EM.Img,
+                    Status = EM.Status
 
-            };
+                };
                 Employees.Add(EEM);
 
             }
@@ -43,7 +43,7 @@ namespace BLL.Services
 
         public static EmployeeModel Get(string email)
         {
-            
+
             var EM = DataAccessFactory.EmployeeDataAccess().Get(email);
             if (EM != null)
             {
@@ -112,9 +112,8 @@ namespace BLL.Services
 
         public static bool Delete(string email)
         {
-           
+
             return DataAccessFactory.EmployeeDataAccess().Delete(email);
         }
-
     }
 }

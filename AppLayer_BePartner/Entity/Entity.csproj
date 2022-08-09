@@ -44,9 +44,16 @@
     <Compile Include="AdminModel.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="EntrepreneurModel.cs" />
+    <Compile Include="IdeaModel.cs" />
+    <Compile Include="InvestorMessageModel.cs" />
+    <Compile Include="InvestorModel.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="MessageModel.cs" />
     <Compile Include="NoticeModel.cs" />
+    <Compile Include="OfferModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportModel.cs" />
+    <Compile Include="TokenModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

@@ -21,15 +21,15 @@ namespace BLL.Services
                 ReportModel rep = new ReportModel()
                 {
 
-                ReportId = item.ReportId,
-                sender = item.sender,
-                Receiver = item.Receiver,
-                Title = item.Title,
-                Description = item.Description,
-                Report_Time = item.Report_Time,
-                Status = item.Status
+                    ReportId = item.ReportId,
+                    sender = item.sender,
+                    Receiver = item.Receiver,
+                    Title = item.Title,
+                    Description = item.Description,
+                    Report_Time = item.Report_Time,
+                    Status = item.Status
 
-            };
+                };
                 Reports.Add(rep);
 
             }
@@ -68,7 +68,7 @@ namespace BLL.Services
             {
                 ReportModel rep = new ReportModel()
                 {
-                    ReportId=item.ReportId,
+                    ReportId = item.ReportId,
                     sender = item.sender,
                     Receiver = item.Receiver,
                     Title = item.Title,
@@ -85,7 +85,7 @@ namespace BLL.Services
         {
             Report AD = new Report()
             {
-                
+
                 sender = item.sender,
                 Receiver = item.Receiver,
                 Title = item.Title,

@@ -1,4 +1,4 @@
-﻿using BLL.Entities;
+﻿using Entity;
 using DAL;
 using DAL.EF;
 using System;
@@ -48,7 +48,7 @@ namespace BLL.Services
                     Feature4_Title = item.Feature4_Title,
                     Feature4_Des = item.Feature4_Des,
 
-                    En_Name = EntrepreneurService.Get(item.En_Post_Email).FirstName + " " + EntrepreneurService.Get(item.En_Post_Email).LastName
+                    En_Name = EntrepreneurServices.Get(item.En_Post_Email).FirstName + " " + EntrepreneurServices.Get(item.En_Post_Email).LastName
                 };
                 ideas.Add(model);
             }
@@ -90,7 +90,7 @@ namespace BLL.Services
                     Feature4_Title = item.Feature4_Title,
                     Feature4_Des = item.Feature4_Des,
 
-                    En_Name = EntrepreneurService.Get(item.En_Post_Email).FirstName + " " + EntrepreneurService.Get(item.En_Post_Email).LastName
+                    En_Name = EntrepreneurServices.Get(item.En_Post_Email).FirstName + " " + EntrepreneurServices.Get(item.En_Post_Email).LastName
                 };
                 return model;
             }
@@ -210,7 +210,7 @@ namespace BLL.Services
                     Feature4_Title = item.Feature4_Title,
                     Feature4_Des = item.Feature4_Des,
 
-                    En_Name = EntrepreneurService.Get(item.En_Post_Email).FirstName + " " + EntrepreneurService.Get(item.En_Post_Email).LastName
+                    En_Name = EntrepreneurServices.Get(item.En_Post_Email).FirstName + " " + EntrepreneurServices.Get(item.En_Post_Email).LastName
                 };
                 ideas.Add(model);
             }
@@ -252,7 +252,7 @@ namespace BLL.Services
                     Feature4_Title = item.Feature4_Title,
                     Feature4_Des = item.Feature4_Des,
 
-                    En_Name = EntrepreneurService.Get(item.En_Post_Email).FirstName + " " + EntrepreneurService.Get(item.En_Post_Email).LastName
+                    En_Name = EntrepreneurServices.Get(item.En_Post_Email).FirstName + " " + EntrepreneurServices.Get(item.En_Post_Email).LastName
                 };
                 return model;
             }

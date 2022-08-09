@@ -1,5 +1,6 @@
-﻿using BLL.Entities;
+﻿using AppLayer_BePartner.Auth;
 using BLL.Services;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace AppLayer_BePartner.Controllers
 {
     public class MessageController : ApiController
     {
+        [InValid]
         [Route("api/message/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()
@@ -60,7 +62,7 @@ namespace AppLayer_BePartner.Controllers
             return Request.CreateResponse(HttpStatusCode.NotFound, "Something went wrong");
         }
 
-        [Route("api/message/massager/{id}")]
+        [Route("api/messenger/{id}")]
         [HttpGet]
         public HttpResponseMessage GetByEmail(string id)
         {

@@ -1,5 +1,5 @@
-﻿using BLL.Entities;
-using BLL.Services;
+﻿using BLL.Services;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

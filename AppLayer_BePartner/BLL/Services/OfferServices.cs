@@ -1,4 +1,4 @@
-﻿using BLL.Entities;
+﻿using Entity;
 using DAL;
 using DAL.EF;
 using System;
@@ -41,7 +41,7 @@ namespace BLL.Services
                 O.Last_Year_Profit = idea.Last_Year_Profit;
                 O.Valuation = idea.Valuation;
 
-                var En = EntrepreneurService.Get(item.En_Email);
+                var En = EntrepreneurServices.Get(item.En_Email);
                 O.FirstName = En.FirstName;
                 O.LastName = En.LastName;
 
@@ -77,7 +77,7 @@ namespace BLL.Services
             O.Last_Year_Profit = idea.Last_Year_Profit;
             O.Valuation = idea.Valuation;
 
-            var En = EntrepreneurService.Get(item.En_Email);
+            var En = EntrepreneurServices.Get(item.En_Email);
             O.FirstName = En.FirstName;
             O.LastName = En.LastName;
 
@@ -153,7 +153,7 @@ namespace BLL.Services
                 O.Last_Year_Profit = idea.Last_Year_Profit;
                 O.Valuation = idea.Valuation;
 
-                var En = EntrepreneurService.Get(item.En_Email);
+                var En = EntrepreneurServices.Get(item.En_Email);
                 O.FirstName = En.FirstName;
                 O.LastName = En.LastName;
 

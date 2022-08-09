@@ -160,7 +160,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tkey" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Tkey" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="CreatedAt" Type="datetime" Nullable="false" />
     <Property Name="ExpiredAt" Type="datetime" />
     <Property Name="User_Id" Type="int" Nullable="false" />

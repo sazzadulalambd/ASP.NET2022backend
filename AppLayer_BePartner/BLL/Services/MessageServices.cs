@@ -1,4 +1,4 @@
-﻿using BLL.Entities;
+﻿using Entity;
 using DAL;
 using DAL.EF;
 using System;
@@ -60,7 +60,7 @@ namespace BLL.Services
                 Receiver = item.Receiver,
                 Message1 = item.Message,
                 Status = item.Status,
-                Time = item.Ttime
+                Time = DateTime.Now.ToString()
             };
             return DataAccessFactory.MessageDataAccess().Create(Im);
         }
@@ -103,7 +103,7 @@ namespace BLL.Services
 
                 if (item.Sender.Equals(email))
                 {
-                    var R = EntrepreneurService.Get(item.Receiver);
+                    var R = EntrepreneurServices.Get(item.Receiver);
 
                     Im.ReceiverName = R.FirstName + " " + R.LastName;
                     Im.ReceiverOccupation = R.Occupation;
@@ -119,7 +119,7 @@ namespace BLL.Services
                 }
                 else
                 {
-                    var R = EntrepreneurService.Get(item.Sender);
+                    var R = EntrepreneurServices.Get(item.Sender);
 
                     Im.SenderName = R.FirstName + " " + R.LastName;
                     Im.SenderOccupation = R.Occupation;

@@ -72,6 +72,8 @@ namespace DAL.Repo
             Ed.Tin = In.Tin;
             Ed.OrgSite = In.OrgSite;
 
+            Ed.Password = In.Password;
+
             try
             {
                 db.SaveChanges();

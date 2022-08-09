@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\GetAuth.cs" />
     <Compile Include="Auth\InValid.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />

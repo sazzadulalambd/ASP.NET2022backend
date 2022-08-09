@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using BLL.Entities;
 using DAL.EF;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

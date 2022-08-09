@@ -21,10 +21,10 @@ namespace BLL.Services
                 NoticeModel AD = new NoticeModel()
                 {
                     Notice_Id = item.Notice_Id,
-                    Subject=item.Subject,
-                    Description=item.Description,
-                    Issue_time=item.Issue_time,
-                    Due_time=item.Due_time,
+                    Subject = item.Subject,
+                    Description = item.Description,
+                    Issue_time = item.Issue_time,
+                    Due_time = item.Due_time,
                     Status = item.Status
                 };
                 Notices.Add(AD);

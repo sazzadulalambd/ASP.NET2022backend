@@ -41,8 +41,6 @@ namespace DAL
             return new MessageRepo(db);
         }
 
-        
-
         public static In_IRepo<Offer, int> OfferDataAccess()
         {
             return new OfferRepo(db);

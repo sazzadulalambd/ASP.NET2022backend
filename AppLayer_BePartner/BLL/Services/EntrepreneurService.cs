@@ -1,6 +1,6 @@
-﻿using BLL.Entities;
-using DAL;
+﻿using DAL;
 using DAL.EF;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +42,7 @@ namespace BLL.Services
 
         public static EntrepreneurModel Get(string email)
         {
-            
+
             var item = DataAccessFactory.EntrepreneurDataAccess().Get(email);
             if (item != null)
             {
@@ -113,5 +113,3 @@ namespace BLL.Services
         }
     }
 }
-
-                    

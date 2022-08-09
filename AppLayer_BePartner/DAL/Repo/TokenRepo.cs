@@ -1,4 +1,5 @@
 ﻿using DAL.EF;
+using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class TokenRepo : Interfaces.In_IRepo<Token, string>
+    internal class TokenRepo : In_IRepo<Token, string>
     {
         bePartnerCentralDatabaseEntities db;
 
