@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class UserRepo : In_IRepo<User, int>, IAuth<User>
+    internal class UserRepo : EM_IRepo<User, int>, IAuth<User>
     {
         bePartnerCentralDatabaseEntities db;
 

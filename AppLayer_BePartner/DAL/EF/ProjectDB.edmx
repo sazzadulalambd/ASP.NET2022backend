@@ -165,7 +165,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tkey" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Tkey" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="CreatedAt" Type="datetime" Nullable="false" />
           <Property Name="ExpiredAt" Type="datetime" />
           <Property Name="User_Id" Type="int" Nullable="false" />
@@ -510,7 +510,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tkey" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Tkey" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ExpiredAt" Type="DateTime" Precision="3" />
           <Property Name="User_Id" Type="Int32" Nullable="false" />

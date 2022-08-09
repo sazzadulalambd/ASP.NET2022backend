@@ -51,16 +51,6 @@ namespace DAL
             return new OfferRepo(db);
         }
 
-        public static In_IRepo<User,int> GetUserDataAccess()
-        {
-            return new UserRepo(db);
-        }
-
-        public static IAuth<User> GetAuthDataAccess()
-        {
-            return new UserRepo(db);
-        }
-
         public static In_IRepo<Token, string> GetTokenDataAccess()
         {
             return new TokenRepo(db);
@@ -102,6 +92,20 @@ namespace DAL
         {
             return new EmployeeRepo(db);
         }
+
+        public static EM_IRepo<User, int> GetUserDataAccess()
+        {
+            return new UserRepo(db);
+        }
+
+
+
         //************** EMPLOYEE **************//
+
+        //*****************ALL*****************//
+        public static IAuth<User> GetAuthDataAccess()
+        {
+            return new UserRepo(db);
+        }
     }
 }
