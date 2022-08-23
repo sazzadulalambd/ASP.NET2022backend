@@ -48,3 +48,24 @@ E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.dll
 E:\1.SCHOOL\COURSE\1. Computer Science\11.19_Advanced Programming With .Net\VS22\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\obj\Debug\BLL.pdb
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Antlr3.Runtime.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\ClosedXML.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\DocumentFormat.OpenXml.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\ExcelNumberFormat.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Antlr3.Runtime.pdb
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\ClosedXML.pdb
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\ClosedXML.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\DocumentFormat.OpenXml.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\ExcelNumberFormat.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Newtonsoft.Json.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\WebGrease.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Entity.dll.config
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\Newtonsoft.Json.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Net.Http.Formatting.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Web.Cors.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Web.Http.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Net.Http.Formatting.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Web.Http.xml
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Web.Http.Cors.dll
+E:\ASP.NET2022backend.git\trunk\AppLayer_BePartner\BLL\bin\Debug\System.Web.Http.Cors.xml

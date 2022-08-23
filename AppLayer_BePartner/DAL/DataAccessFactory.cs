@@ -98,14 +98,14 @@ namespace DAL
             return new UserRepo(db);
         }
 
-
-
-        //************** EMPLOYEE **************//
-
-        //*****************ALL*****************//
         public static IAuth<User> GetAuthDataAccess()
         {
             return new UserRepo(db);
         }
+
+        //************** EMPLOYEE **************//
+
+        
+
     }
 }

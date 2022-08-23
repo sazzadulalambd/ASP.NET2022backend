@@ -20,10 +20,10 @@ namespace AppLayer_BePartner.Controllers
         }
 
         [Route("api/Report/Recived/{id}")]
-        [HttpGet]
+        [HttpPost]
         public HttpResponseMessage recivedByEmails(string email)
         {
-            email = email + ".com";
+            email = email+".com";
             var data = ReportService.recivedByEmails(email);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
@@ -32,7 +32,7 @@ namespace AppLayer_BePartner.Controllers
         [HttpGet]
         public HttpResponseMessage sendByEmails(string email)
         {
-            email = email + ".com";
+            email = email+ ".com";
             var data = ReportService.sendByEmails(email);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }

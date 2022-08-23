@@ -12,7 +12,7 @@ namespace AppLayer_BePartner.Controllers
 {
     public class MessageController : ApiController
     {
-        [InValid]
+        //[InValid]
         [Route("api/message/get/all")]
         [HttpGet]
         public HttpResponseMessage Get()

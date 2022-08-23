@@ -82,11 +82,21 @@ namespace DAL.Repo
             
         }
 
-        public List<Report> recivedByEmails(string RC_email)
+        public List<Report> recivedByEmails()
         {
-            //return db.Reports.FirstOrDefault(s => s.Receiver.Equals(RC_email));
-            var REPO = (from I in db.Reports where I.Receiver.Equals(RC_email) select I).ToList();
-            return REPO;
+            return db.Reports.ToList();
+        }
+        public Report recivedByEmails(string RC_email)
+        {
+            return db.Reports.FirstOrDefault(ok => ok.Receiver.Equals(RC_email));
+            
+            //var REPO = (from I in db.Reports where I.Receiver.Equals(RC_email) select I).ToList();
+            //return REPO;
+        }
+
+        List<Report> Report_IRepo<Report, string>.recivedByEmails(string email)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,7 +12,7 @@ using System.Web.Http;
 
 namespace AppLayer_BePartner.Controllers
 {
-    [InValid]
+    //[InValid]
     public class IdeaController : ApiController
     {
         [Route("api/idea/all")]
